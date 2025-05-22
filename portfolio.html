@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio | Web Developer</title>
+    <meta
+      name="description"
+      content="Professional portfolio showcasing my work and skills"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3B82F6",
+              dark: "#1E293B",
+              light: "#F8FAFC",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-light text-dark">
+    <!-- Navigation -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+      <nav class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <a href="#" class="text-2xl font-bold text-primary">Portfolio</a>
+          <div class="hidden md:flex space-x-8">
+            <a href="#home" class="hover:text-primary transition">Home</a>
+            <a href="#about" class="hover:text-primary transition">About</a>
+            <a href="#projects" class="hover:text-primary transition"
+              >Projects</a
+            >
+            <a href="#skills" class="hover:text-primary transition">Skills</a>
+            <a href="#contact" class="hover:text-primary transition">Contact</a>
+          </div>
+          <button class="md:hidden focus:outline-none" id="menu-toggle">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden mt-4" id="mobile-menu">
+          <a href="#home" class="block py-2 hover:text-primary">Home</a>
+          <a href="#about" class="block py-2 hover:text-primary">About</a>
+          <a href="#projects" class="block py-2 hover:text-primary">Projects</a>
+          <a href="#skills" class="block py-2 hover:text-primary">Skills</a>
+          <a href="#contact" class="block py-2 hover:text-primary">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-6">
+      <div class="container mx-auto flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">
+            Hi, I'm <span class="text-primary">Kirubel Samuel Dalacho</span>
+          </h1>
+          <h2 class="text-2xl md:text-3xl font-semibold mb-6">
+            Software Developer
+          </h2>
+          <p class="text-lg mb-8 max-w-lg">
+            I create beautiful, functional websites with modern technologies and
+            user experience in mind.
+          </p>
+          <div class="flex space-x-4">
+            <a
+              href="#projects"
+              class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+              >View Work</a
+            >
+            <a
+              href="#contact"
+              class="border-2 border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary hover:text-white transition"
+              >Contact Me</a
+            >
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <img
+            src="image.jpg"
+            alt="Profile picture"
+            class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          About <span class="text-primary">Me</span>
+        </h2>
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+            <img
+              src="image.jpg"
+              alt="About me"
+              class="rounded-lg shadow-lg w-full max-w-md"
+            />
+          </div>
+          <div class="md:w-2/3 md:pl-12">
+            <h3 class="text-2xl font-semibold mb-4">Who I Am</h3>
+            <p class="mb-6 text-lg">
+              I'm a passionate Software developer with specialized skills
+              creating clean UI/UX design and building software. I specialize in
+              front-end development but also have experience with full-stack
+              projects.
+            </p>
+            <p class="mb-6 text-lg">
+              My approach combines technical expertise with creative
+              problem-solving to deliver solutions that are both functional and
+              visually appealing.
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <h4 class="font-semibold mb-2">Name:</h4>
+                <p>Kirubel Samuel Dalacho</p>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-2">Email:</h4>
+                <p>kirudansami@gmail.com</p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold mb-2">Location:</h4>
+                <p>Addis Ababa, Ethiopia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          My <span class="text-primary">Projects</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition"
+          >
+            <img
+              src="https://picsum.photos/600/400?random=3"
+              alt="E-commerce website"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">E-commerce Platform</h3>
+              <p class="text-gray-600 mb-4">
+                A full-featured online store with cart functionality and payment
+                processing.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm"
+                  >React</span
+                >
+                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm"
+                  >Node.js</span
+                >
+                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm"
+                  >MongoDB</span
+                >
+              </div>
+              <!-- <a href="#" class="text-primary font-medium hover:underline">View Project →</a> -->
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition"
+          >
+            <img
+              src="https://picsum.photos/600/400?random=4"
+              alt="Task management app"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Task Management App</h3>
+              <p class="text-gray-600 mb-4">
+                A productivity application for organizing and tracking tasks and
+                projects.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm"
+                  >Vue.js</span
+                >
+                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm"
+                  >Firebase</span
+                >
+              </div>
+              <!-- <a href="#" class="text-primary font-medium hover:underline">View Project →</a> -->
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition"
+          >
+            <img
+              src="https://picsum.photos/600/400?random=5"
+              alt="Travel blog"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Travel Blog</h3>
+              <p class="text-gray-600 mb-4">
+                A responsive blog platform with content management system.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm"
+                  >WordPress</span
+                >
+                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm"
+                  >PHP</span
+                >
+                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm"
+                  >MySQL</span
+                >
+              </div>
+              <!-- <a href="#" class="text-primary font-medium hover:underline">View Project →</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          My <span class="text-primary">Skills</span>
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div class="flex flex-col items-center">
+            <div
+              class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mb-3"
+            >
+              <i class="fab fa-html5 text-4xl text-orange-500"></i>
+            </div>
+            <span class="font-medium">HTML5</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mb-3"
+            >
+              <i class="fab fa-css3-alt text-4xl text-blue-500"></i>
+            </div>
+            <span class="font-medium">CSS3</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mb-3"
+            >
+              <i class="fab fa-js text-4xl text-yellow-500"></i>
+            </div>
+            <span class="font-medium">JavaScript</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mb-3"
+            >
+              <i class="fab fa-react text-4xl text-blue-400"></i>
+            </div>
+            <span class="font-medium">React</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mb-3"
+            >
+              <i class="fab fa-node-js text-4xl text-green-500"></i>
+            </div>
+            <span class="font-medium">Node.js</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mb-3"
+            >
+              <i class="fab fa-git-alt text-4xl text-orange-600"></i>
+            </div>
+            <span class="font-medium">Git</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          Get In <span class="text-primary">Touch</span>
+        </h2>
+        <div class="flex flex-col md:flex-row gap-12">
+          <div class="md:w-1/2">
+            <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <i class="fas fa-envelope text-primary text-xl mt-1 mr-4"></i>
+                <div>
+                  <h4 class="font-medium">Email</h4>
+                  <p class="text-gray-600">kirudansami@gmail.com</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-phone-alt text-primary text-xl mt-1 mr-4"></i>
+                <div>
+                  <h4 class="font-medium">Phone</h4>
+                  <p class="text-gray-600">+91 7888684332, +251 985600388</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i
+                  class="fas fa-map-marker-alt text-primary text-xl mt-1 mr-4"
+                ></i>
+                <div>
+                  <h4 class="font-medium">Location</h4>
+                  <p class="text-gray-600">Addis Ababa, Ethiopia</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8">
+              <h4 class="font-medium mb-4">Follow Me</h4>
+              <div class="flex space-x-4">
+                <a
+                  href="https://github.com/KirubelSamuel"
+                  class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/kirubel-samuel-400051167/"
+                  class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <form class="space-y-6">
+              <div>
+                <label for="name" class="block mb-2 font-medium"
+                  >Your Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label for="email" class="block mb-2 font-medium"
+                  >Your Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label for="subject" class="block mb-2 font-medium"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label for="message" class="block mb-2 font-medium"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  rows="5"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition w-full md:w-auto"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <a href="#" class="text-2xl font-bold text-white"
+              >Kirubel Samuel Dalacho</a
+            >
+            <p class="mt-2 text-gray-400">© 2025 All Rights Reserved</p>
+          </div>
+          <div class="flex space-x-6">
+            <a href="#" class="hover:text-primary transition">Home</a>
+            <a href="#" class="hover:text-primary transition">About</a>
+            <a href="#" class="hover:text-primary transition">Projects</a>
+            <a href="#" class="hover:text-primary transition">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // Form submission
+      const contactForm = document.querySelector("form");
+      if (contactForm) {
+        contactForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("Thank you for your message! I will get back to you soon.");
+          contactForm.reset();
+        });
+      }
+    </script>
+  </body>
+</html>
